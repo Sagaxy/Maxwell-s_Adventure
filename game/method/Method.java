@@ -18,5 +18,15 @@ public void gemPowerCheck(Player Maxwell) {
 			Maxwell.setLifeStatus(false);
 		}
 	}
+public void Travel(Player Maxwell) {
+	
+	if(Maxwell.getCoin()>=1) {
+		
+	}
+	else {
+		Maxwell.setLifeStatus(false);
+		System.out.println("YOU DIED by do not have any coin");
+	}
+}
 
 }

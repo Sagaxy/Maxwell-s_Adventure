@@ -4,6 +4,7 @@ public class Town {
 
 	int coinCost;
 	int powerQuantity;
+	
 
 	public int getCoinCost() {
 		return coinCost;

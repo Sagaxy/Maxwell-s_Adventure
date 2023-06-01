@@ -1,11 +1,14 @@
 package game.character;
 
+import game.town.Town;
+
 public class Player {
 
 	int coin;
 	int gemPower;
 	int gemPowerThreshold;
 	boolean lifeStatus;
+	Town currentTown;
 
 	public Player(int coin, int gemPower, int gemPowerThreshold, boolean lifeStatus) {
 		super();

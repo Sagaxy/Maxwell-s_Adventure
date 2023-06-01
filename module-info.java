@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author Sagaxy
+ *
+ */
+module MaxwellsAdventure {
+}

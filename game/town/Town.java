@@ -2,16 +2,24 @@ package game.town;
 
 public class Town {
 
-	int coinCost;
+	String name;
+	int travelCost;
 	int powerQuantity;
-	
 
-	public int getCoinCost() {
-		return coinCost;
+	public String getName() {
+		return name;
 	}
 
-	public void setCoinCost(int coinCost) {
-		this.coinCost = coinCost;
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public int getTravelCost() {
+		return travelCost;
+	}
+
+	public void setTravelCost(int travelCost) {
+		this.travelCost = travelCost;
 	}
 
 	public int getPowerQuantity() {

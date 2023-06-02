@@ -10,12 +10,14 @@ public class Player {
 	boolean lifeStatus;
 	Town currentTown;
 
-	public Player(int coin, int gemPower, int gemPowerThreshold, boolean lifeStatus) {
+	public Player(int coin, int gemPower, int gemPowerThreshold, boolean lifeStatus,
+			Town currentTown) {
 		super();
 		this.coin = coin;
 		this.gemPower = gemPower;
 		this.gemPowerThreshold = gemPowerThreshold;
 		this.lifeStatus = lifeStatus;
+		this.currentTown = currentTown;
 	}
 
 	public int getCoin() {
@@ -49,6 +51,14 @@ public class Player {
 
 	public void setLifeStatus(boolean lifeStatus) {
 		this.lifeStatus = lifeStatus;
+	}
+	
+	public Town getCurrentTown() {
+		return currentTown;
+	}
+
+	public void setCurrentTown(Town currentTown) {
+		this.currentTown = currentTown;
 	}
 
 }

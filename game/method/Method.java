@@ -5,7 +5,7 @@ import game.character.Player;
 public class Method {
 	
 	public void Start() {
-		Player Maxwell = new Player(3,0,7,true);
+		Player Maxwell = new Player(3,0,7,true,Ubud);
 	}
 	
 public void gemPowerCheck(Player Maxwell) {

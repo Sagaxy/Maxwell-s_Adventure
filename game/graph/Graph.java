@@ -13,6 +13,12 @@ public class Graph<T> {
 		this.edges = new ArrayList<T>();
 	}
 	
+	public void addVertex(T data) {
+		
+		
+		
+	}
+	
 	
 	
 

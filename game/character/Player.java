@@ -1,17 +1,17 @@
 package game.character;
 
-import game.town.Town;
+import game.town.TownModel;
 
 public class Player {
 
-	int coin;
-	int gemPower;
-	int gemPowerThreshold;
-	boolean lifeStatus;
-	Town currentTown;
+	private int coin;
+	private int gemPower;
+	private int gemPowerThreshold;
+	private boolean lifeStatus;
+	private TownModel currentTown;
 
-	public Player(int coin, int gemPower, int gemPowerThreshold, boolean lifeStatus,
-			Town currentTown) {
+	
+	public Player(int coin, int gemPower, int gemPowerThreshold, boolean lifeStatus, TownModel currentTown) {
 		super();
 		this.coin = coin;
 		this.gemPower = gemPower;
@@ -20,6 +20,7 @@ public class Player {
 		this.currentTown = currentTown;
 	}
 
+	
 	public int getCoin() {
 		return coin;
 	}
@@ -52,13 +53,14 @@ public class Player {
 	public void setLifeStatus(boolean lifeStatus) {
 		this.lifeStatus = lifeStatus;
 	}
-	
-	public Town getCurrentTown() {
+	public TownModel getCurrentTown() {
 		return currentTown;
 	}
 
-	public void setCurrentTown(Town currentTown) {
+	public void setCurrentTown(TownModel currentTown) {
 		this.currentTown = currentTown;
 	}
+
+
 
 }

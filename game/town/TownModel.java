@@ -6,7 +6,6 @@ public class TownModel {
 	int powerQuantity;
 	
 	
-
 	public TownModel(String name, int powerQuantity) {
 		super();
 		this.name = name;

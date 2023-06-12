@@ -4,9 +4,11 @@ import game.character.Player;
 import game.town.*;
 
 public class Method {
-
-	public void Start(TownModel Ubud) {
-		Player Maxwell = new Player(3, 0, 7, true, Ubud);
+	
+	protected Player Maxwell = new Player(3, 0, 7, false, );
+	
+	public void Start() {
+		Maxwell.setLifeStatus(true);
 	}
 
 	public void gemPowerCheck(Player Maxwell) {

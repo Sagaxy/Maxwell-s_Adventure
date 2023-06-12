@@ -5,15 +5,15 @@ import java.util.ArrayList;
 public class Vertex<T> {
 	
 	private T data;
-	private ArrayList<T> edgeIn;
-	private ArrayList<T> edgeout;
+	private ArrayList<T> edgeGo;
+	private ArrayList<T> edgeCome;
 	
 	
-	public Vertex(T data, ArrayList<T> edgeIn, ArrayList<T> edgeout) {
+	public Vertex(T data, ArrayList<T> edgeGo, ArrayList<T> edgeCome) {
 		super();
 		this.data = data;
-		this.edgeIn = edgeIn;
-		this.edgeout = edgeout;
+		this.edgeGo = edgeGo;
+		this.edgeCome = edgeCome;
 	}
 
 
@@ -27,23 +27,23 @@ public class Vertex<T> {
 	}
 
 
-	public ArrayList<T> getEdgeIn() {
-		return edgeIn;
+	public ArrayList<T> getEdgeGo() {
+		return edgeGo;
 	}
 
 
-	public void setEdgeIn(ArrayList<T> edgeIn) {
-		this.edgeIn = edgeIn;
+	public void setEdgeGo(ArrayList<T> edgeGo) {
+		this.edgeGo = edgeGo;
 	}
 
 
-	public ArrayList<T> getEdgeout() {
-		return edgeout;
+	public ArrayList<T> getEdgeCome() {
+		return edgeCome;
 	}
 
 
-	public void setEdgeout(ArrayList<T> edgeout) {
-		this.edgeout = edgeout;
+	public void setEdgeCome(ArrayList<T> edgeCome) {
+		this.edgeCome = edgeCome;
 	}
 	
 	

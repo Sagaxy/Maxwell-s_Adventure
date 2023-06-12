@@ -1,13 +1,15 @@
 package game.graph;
 
+import game.town.TownModel;
+
 public class Edge {
 	
-	Cidade destino;
-    int custo;
+	TownModel destiny;
+    int cost;
 
-    public Aresta(Cidade destino, int custo) {
-        this.destino = destino;
-        this.custo = custo;
+    public Edge(TownModel destiny, int cost) {
+        this.destiny = destiny;
+        this.cost = cost;
     }
 
 }

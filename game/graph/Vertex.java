@@ -6,14 +6,13 @@ public class Vertex<T> {
 	
 	private T data;
 	private ArrayList<T> edgeGo;
-	private ArrayList<T> edgeCome;
 	
 	
-	public Vertex(T data, ArrayList<T> edgeGo, ArrayList<T> edgeCome) {
+	
+	public Vertex(T data, ArrayList<T> edgeGo) {
 		super();
 		this.data = data;
 		this.edgeGo = edgeGo;
-		this.edgeCome = edgeCome;
 	}
 
 
@@ -35,19 +34,4 @@ public class Vertex<T> {
 	public void setEdgeGo(ArrayList<T> edgeGo) {
 		this.edgeGo = edgeGo;
 	}
-
-
-	public ArrayList<T> getEdgeCome() {
-		return edgeCome;
-	}
-
-
-	public void setEdgeCome(ArrayList<T> edgeCome) {
-		this.edgeCome = edgeCome;
-	}
-	
-	
-	
-	
-
 }

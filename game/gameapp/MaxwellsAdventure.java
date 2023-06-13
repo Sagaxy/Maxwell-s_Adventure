@@ -13,7 +13,7 @@ public class MaxwellsAdventure {
 		TownModel protetoradeOfDrogove = new TownModel("Protectorate of Drogove", 3);
 		TownModel kingdomOfLastwatch= new TownModel("Kindgom of Lastwatch", -2);
 		TownModel grandduchyOfSmalia = new TownModel("Grand Duchy of Smalia", 1);
-		TownModel kingdomOfOdlcalia = new TownModel("Kingdom of OldCalia", 4);
+		TownModel kingdomOfOldcalia = new TownModel("Kingdom of OldCalia", 4);
 		TownModel kingdomOfKalb = new TownModel("Kingdom of Kalb", 2); 
 		TownModel aymarLeague = new TownModel("Aymar League", 1); 
 		TownModel defalsia = new TownModel("Defalsia", -3); 
@@ -21,7 +21,12 @@ public class MaxwellsAdventure {
 		TownModel principalityOfKarhora = new TownModel("Principality of Karhora", -2);
 		TownModel chandirSultanate = new TownModel("Chandir Sultanate ", 1);
 		TownModel bun = new TownModel("Bun", 5);
-		TownModel principalityOfKasya = new	TownModel("Principality of Kasya", -7); 
+		TownModel principalityOfKasya = new	TownModel("Principality of Kasya", -7);
+		
+		ubud.addEdge(kingdonOfLegmod, 2);
+		ubud.addEdge(principalityOfNekikh, 1);
+		
+		kingdonOfLegmod.addEdge(kingdomOfOldcalia, 4);
 	}
 
 }

@@ -12,8 +12,16 @@ public class MaxwellsAdventure {
 		TownModel pricipalityOfGritesthr = new TownModel("Pricipality of Gritesthr", 5);
 		TownModel protetoradeOfDrogove = new TownModel("Protectorate of Drogove", 3);
 		TownModel kingdomOfLastwatch= new TownModel("Kindgom of Lastwatch", -2);
-		TownModel = new TownModel(null, 0);
-		TownModel = new TownModel(null, 0);
+		TownModel grandduchyOfSmalia = new TownModel("Grand Duchy of Smalia", 1);
+		TownModel kingdomOfOdlcalia = new TownModel("Kingdom of OldCalia", 4);
+		TownModel kingdomOfKalb = new TownModel("Kingdom of Kalb", 2); 
+		TownModel aymarLeague = new TownModel("Aymar League", 1); 
+		TownModel defalsia = new TownModel("Defalsia", -3); 
+		TownModel vuneseOfEmpire = new TownModel("Vunese of Empire", 0);
+		TownModel principalityOfKarhora = new TownModel("Principality of Karhora", -2);
+		TownModel chandirSultanate = new TownModel("Chandir Sultanate ", 1);
+		TownModel bun = new TownModel("Bun", 5);
+		TownModel principalityOfKasya = new	TownModel("Principality of Kasya", -7); 
 	}
 
 }

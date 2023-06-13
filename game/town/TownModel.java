@@ -19,8 +19,8 @@ public class TownModel {
 		this.neighboringTowns = new ArrayList<>();
 	}
 	
-	public void addEdge(TownModel destiny,int cost) {
-		Edge edge = new Edge(destiny,cost);;
+	public void addEdge(TownModel destiny,int powerQuantity) {
+		Edge edge = new Edge(destiny,powerQuantity);;
 		
 	}
 

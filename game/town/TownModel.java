@@ -20,7 +20,8 @@ public class TownModel {
 	}
 	
 	public void addEdge(TownModel destiny,int powerQuantity) {
-		Edge edge = new Edge(destiny,powerQuantity);;
+		Edge edge = new Edge(destiny,powerQuantity);
+		neighboringTowns.add(edge);
 		
 	}
 

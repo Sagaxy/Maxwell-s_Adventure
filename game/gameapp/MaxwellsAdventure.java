@@ -47,51 +47,52 @@ public class MaxwellsAdventure {
 		protetorateOfDrogove.addEdge(kingdomOfLastwatch, -2);
 		protetorateOfDrogove.addEdge(kingdomOfOldcalia, 4);
 
-		kingdomOfOldcalia.addEdge(principalityOfKasya, 0);
-		kingdomOfOldcalia.addEdge(principalityOfKasya, 0);
-		kingdomOfOldcalia.addEdge(principalityOfKasya, 0);
-		kingdomOfOldcalia.addEdge(principalityOfKasya, 0);
-		kingdomOfOldcalia.addEdge(principalityOfKasya, 0);
-		kingdomOfOldcalia.addEdge(principalityOfKasya, 0);
+		kingdomOfOldcalia.addEdge(protetorateOfDrogove, 3);
+		kingdomOfOldcalia.addEdge(kingdomOfKalb, 2);
+		kingdomOfOldcalia.addEdge(defalsia, -3);
+		kingdomOfOldcalia.addEdge(kingdonOfLegmod, 2);
+		kingdomOfOldcalia.addEdge(grandduchyOfSmalia, 1);
+		kingdomOfOldcalia.addEdge(kingdomOfLastwatch, -2);
+		kingdomOfOldcalia.addEdge(aymarLeague, 1);
 
-		kingdomOfKalb.addEdge(principalityOfKasya, 0);
-		kingdomOfKalb.addEdge(principalityOfKasya, 0);
-		kingdomOfKalb.addEdge(principalityOfKasya, 0);
+		kingdomOfKalb.addEdge(aymarLeague, 1);
+		kingdomOfKalb.addEdge(vuneseOfEmpire, 0);
+		kingdomOfKalb.addEdge(kingdomOfOldcalia, 4);
 
-		kingdomOfLastwatch.addEdge(principalityOfKasya, 0);
-		kingdomOfLastwatch.addEdge(principalityOfKasya, 0);
-		kingdomOfLastwatch.addEdge(principalityOfKasya, 0);
-		kingdomOfLastwatch.addEdge(principalityOfKasya, 0);
+		kingdomOfLastwatch.addEdge(protetorateOfDrogove, 3);
+		kingdomOfLastwatch.addEdge(grandduchyOfSmalia, 1);
+		kingdomOfLastwatch.addEdge(kingdomOfOldcalia, 4);
+		kingdomOfLastwatch.addEdge(principalityOfGritesthr, 5);
 
-		grandduchyOfSmalia.addEdge(principalityOfKasya, 0);
-		grandduchyOfSmalia.addEdge(principalityOfKasya, 0);
+		grandduchyOfSmalia.addEdge(kingdomOfLastwatch, -2);
+		grandduchyOfSmalia.addEdge(kingdomOfOldcalia, 4);
 
-		defalsia.addEdge(principalityOfKasya, 0);
-		defalsia.addEdge(principalityOfKasya, 0);
+		defalsia.addEdge(kingdomOfOldcalia, 4);
+		defalsia.addEdge(aymarLeague, 1);
 
-		vuneseOfEmpire.addEdge(principalityOfKasya, 0);
-		vuneseOfEmpire.addEdge(principalityOfKasya, 0);
-		vuneseOfEmpire.addEdge(principalityOfKasya, 0);
+		vuneseOfEmpire.addEdge(aymarLeague, 1);
+		vuneseOfEmpire.addEdge(chandirSultanate, 1);
+		vuneseOfEmpire.addEdge(kingdomOfKalb, 2);
 
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
-		aymarLeague.addEdge(principalityOfKasya, 0);
+		aymarLeague.addEdge(principalityOfKarhora, -2);
+		aymarLeague.addEdge(nargumun, 0);
+		aymarLeague.addEdge(bun, 5);
+		aymarLeague.addEdge(defalsia, -3);
+		aymarLeague.addEdge(vuneseOfEmpire, 0);
+		aymarLeague.addEdge(chandirSultanate, 1);
+		aymarLeague.addEdge(kingdomOfOldcalia, 4);
+		aymarLeague.addEdge(kingdomOfKalb, 2);
 
-		principalityOfKarhora.addEdge(principalityOfKasya, 0);
-		principalityOfKarhora.addEdge(principalityOfKasya, 0);
+		principalityOfKarhora.addEdge(aymarLeague, 1);
+		principalityOfKarhora.addEdge(nargumun, 0);
 
-		nargumun.addEdge(nargumun, 0);
-		nargumun.addEdge(nargumun, 0);
-		nargumun.addEdge(nargumun, 0);
+		nargumun.addEdge(bun, 5);
+		nargumun.addEdge(aymarLeague, 1);
+		nargumun.addEdge(principalityOfKarhora, -2);
 
 		bun.addEdge(nargumun, 0);
-		bun.addEdge(nargumun, 0);
-		bun.addEdge(nargumun, 0);
+		bun.addEdge(chandirSultanate, 1);
+		bun.addEdge(aymarLeague, 1);
 
 		chandirSultanate.addEdge(aymarLeague, 1);
 		chandirSultanate.addEdge(vuneseOfEmpire, 0);

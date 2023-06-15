@@ -23,7 +23,7 @@ public class MaxwellsAdventure {
 		TownModel bun = new TownModel("Bun", 5);
 		TownModel principalityOfKasya = new TownModel("Principality of Kasya", -7);
 		TownModel nargumun = new TownModel("Nargumun", 0);
-
+		
 		ubud.addEdge(kingdonOfLegmod, 2);
 		ubud.addEdge(principalityOfNekikh, 1);
 

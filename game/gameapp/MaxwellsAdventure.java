@@ -1,11 +1,12 @@
 package game.gameapp;
 
+import game.character.Player;
 import game.town.TownModel;
 
 public class MaxwellsAdventure {
 
 	public static void main(String[] args) {
-
+		
 		TownModel ubud = new TownModel("Ubud", 0);
 		TownModel kingdonOfLegmod = new TownModel("Kingdon of Legmod", 2);
 		TownModel principalityOfNekikh = new TownModel("Principality of Nekikh", 1);
@@ -24,83 +25,86 @@ public class MaxwellsAdventure {
 		TownModel principalityOfKasya = new TownModel("Principality of Kasya", -7);
 		TownModel nargumun = new TownModel("Nargumun", 0);
 		
-		ubud.addEdge(kingdonOfLegmod, 2);
-		ubud.addEdge(principalityOfNekikh, 1);
+		ubud.addEdge(kingdonOfLegmod);
+		ubud.addEdge(principalityOfNekikh);
 
-		kingdonOfLegmod.addEdge(kingdomOfOldcalia, 4);
-		kingdonOfLegmod.addEdge(principalityOfNekikh, 1);
-		kingdonOfLegmod.addEdge(principalityOfGritesthr, 5);
-		kingdonOfLegmod.addEdge(protetorateOfDrogove, 3);
-		kingdonOfLegmod.addEdge(ubud, 0);
+		kingdonOfLegmod.addEdge(kingdomOfOldcalia);
+		kingdonOfLegmod.addEdge(principalityOfNekikh);
+		kingdonOfLegmod.addEdge(principalityOfGritesthr);
+		kingdonOfLegmod.addEdge(protetorateOfDrogove);
+		kingdonOfLegmod.addEdge(ubud);
 
-		principalityOfNekikh.addEdge(principalityOfGritesthr, 5);
-		principalityOfNekikh.addEdge(kingdonOfLegmod, 2);
-		principalityOfNekikh.addEdge(ubud, 0);
+		principalityOfNekikh.addEdge(principalityOfGritesthr);
+		principalityOfNekikh.addEdge(kingdonOfLegmod);
+		principalityOfNekikh.addEdge(ubud);
 
-		principalityOfGritesthr.addEdge(protetorateOfDrogove, 3);
-		principalityOfGritesthr.addEdge(kingdomOfLastwatch, -2);
-		principalityOfGritesthr.addEdge(kingdonOfLegmod, 2);
-		principalityOfGritesthr.addEdge(principalityOfNekikh, 1);
+		principalityOfGritesthr.addEdge(protetorateOfDrogove);
+		principalityOfGritesthr.addEdge(kingdomOfLastwatch);
+		principalityOfGritesthr.addEdge(kingdonOfLegmod);
+		principalityOfGritesthr.addEdge(principalityOfNekikh);
 
-		protetorateOfDrogove.addEdge(principalityOfGritesthr, 5);
-		protetorateOfDrogove.addEdge(kingdonOfLegmod, 2);
-		protetorateOfDrogove.addEdge(kingdomOfLastwatch, -2);
-		protetorateOfDrogove.addEdge(kingdomOfOldcalia, 4);
+		protetorateOfDrogove.addEdge(principalityOfGritesthr);
+		protetorateOfDrogove.addEdge(kingdonOfLegmod);
+		protetorateOfDrogove.addEdge(kingdomOfLastwatch);
+		protetorateOfDrogove.addEdge(kingdomOfOldcalia);
 
-		kingdomOfOldcalia.addEdge(protetorateOfDrogove, 3);
-		kingdomOfOldcalia.addEdge(kingdomOfKalb, 2);
-		kingdomOfOldcalia.addEdge(defalsia, -3);
-		kingdomOfOldcalia.addEdge(kingdonOfLegmod, 2);
-		kingdomOfOldcalia.addEdge(grandduchyOfSmalia, 1);
-		kingdomOfOldcalia.addEdge(kingdomOfLastwatch, -2);
-		kingdomOfOldcalia.addEdge(aymarLeague, 1);
+		kingdomOfOldcalia.addEdge(protetorateOfDrogove);
+		kingdomOfOldcalia.addEdge(kingdomOfKalb);
+		kingdomOfOldcalia.addEdge(defalsia);
+		kingdomOfOldcalia.addEdge(kingdonOfLegmod);
+		kingdomOfOldcalia.addEdge(grandduchyOfSmalia);
+		kingdomOfOldcalia.addEdge(kingdomOfLastwatch);
+		kingdomOfOldcalia.addEdge(aymarLeague);
 
-		kingdomOfKalb.addEdge(aymarLeague, 1);
-		kingdomOfKalb.addEdge(vuneseOfEmpire, 0);
-		kingdomOfKalb.addEdge(kingdomOfOldcalia, 4);
+		kingdomOfKalb.addEdge(aymarLeague);
+		kingdomOfKalb.addEdge(vuneseOfEmpire);
+		kingdomOfKalb.addEdge(kingdomOfOldcalia);
 
-		kingdomOfLastwatch.addEdge(protetorateOfDrogove, 3);
-		kingdomOfLastwatch.addEdge(grandduchyOfSmalia, 1);
-		kingdomOfLastwatch.addEdge(kingdomOfOldcalia, 4);
-		kingdomOfLastwatch.addEdge(principalityOfGritesthr, 5);
+		kingdomOfLastwatch.addEdge(protetorateOfDrogove);
+		kingdomOfLastwatch.addEdge(grandduchyOfSmalia);
+		kingdomOfLastwatch.addEdge(kingdomOfOldcalia);
+		kingdomOfLastwatch.addEdge(principalityOfGritesthr);
 
-		grandduchyOfSmalia.addEdge(kingdomOfLastwatch, -2);
-		grandduchyOfSmalia.addEdge(kingdomOfOldcalia, 4);
+		grandduchyOfSmalia.addEdge(kingdomOfLastwatch);
+		grandduchyOfSmalia.addEdge(kingdomOfOldcalia);
 
-		defalsia.addEdge(kingdomOfOldcalia, 4);
-		defalsia.addEdge(aymarLeague, 1);
+		defalsia.addEdge(kingdomOfOldcalia);
+		defalsia.addEdge(aymarLeague);
 
-		vuneseOfEmpire.addEdge(aymarLeague, 1);
-		vuneseOfEmpire.addEdge(chandirSultanate, 1);
-		vuneseOfEmpire.addEdge(kingdomOfKalb, 2);
+		vuneseOfEmpire.addEdge(aymarLeague);
+		vuneseOfEmpire.addEdge(chandirSultanate);
+		vuneseOfEmpire.addEdge(kingdomOfKalb);
 
-		aymarLeague.addEdge(principalityOfKarhora, -2);
-		aymarLeague.addEdge(nargumun, 0);
-		aymarLeague.addEdge(bun, 5);
-		aymarLeague.addEdge(defalsia, -3);
-		aymarLeague.addEdge(vuneseOfEmpire, 0);
-		aymarLeague.addEdge(chandirSultanate, 1);
-		aymarLeague.addEdge(kingdomOfOldcalia, 4);
-		aymarLeague.addEdge(kingdomOfKalb, 2);
+		aymarLeague.addEdge(principalityOfKarhora);
+		aymarLeague.addEdge(nargumun);
+		aymarLeague.addEdge(bun);
+		aymarLeague.addEdge(defalsia);
+		aymarLeague.addEdge(vuneseOfEmpire);
+		aymarLeague.addEdge(chandirSultanate);
+		aymarLeague.addEdge(kingdomOfOldcalia);
+		aymarLeague.addEdge(kingdomOfKalb);
 
-		principalityOfKarhora.addEdge(aymarLeague, 1);
-		principalityOfKarhora.addEdge(nargumun, 0);
+		principalityOfKarhora.addEdge(aymarLeague);
+		principalityOfKarhora.addEdge(nargumun);
 
-		nargumun.addEdge(bun, 5);
-		nargumun.addEdge(aymarLeague, 1);
-		nargumun.addEdge(principalityOfKarhora, -2);
+		nargumun.addEdge(bun);
+		nargumun.addEdge(aymarLeague);
+		nargumun.addEdge(principalityOfKarhora);
 
-		bun.addEdge(nargumun, 0);
-		bun.addEdge(chandirSultanate, 1);
-		bun.addEdge(aymarLeague, 1);
+		bun.addEdge(nargumun);
+		bun.addEdge(chandirSultanate);
+		bun.addEdge(aymarLeague);
 
-		chandirSultanate.addEdge(aymarLeague, 1);
-		chandirSultanate.addEdge(vuneseOfEmpire, 0);
-		chandirSultanate.addEdge(bun, 5);
-		chandirSultanate.addEdge(principalityOfKasya, -7);
+		chandirSultanate.addEdge(aymarLeague);
+		chandirSultanate.addEdge(vuneseOfEmpire);
+		chandirSultanate.addEdge(bun);
+		chandirSultanate.addEdge(principalityOfKasya);
 
-		principalityOfKasya.addEdge(chandirSultanate, 1);
-
+		principalityOfKasya.addEdge(chandirSultanate);
+		
+	
+		Player player = new Player(ubud);
+	
 	}
 
 }

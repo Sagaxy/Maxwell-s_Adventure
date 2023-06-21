@@ -4,17 +4,19 @@ import game.town.TownModel;
 
 public class Player {
 
-	private int coin;
-	private int gemPower;
-	private int gemPowerThreshold;
-	private TownModel currentTown;
-
+	public int coin;
+	public int gemPower;
+	public int gemPowerThreshold;
+	public TownModel currentTown;
 	
-	public Player(int coin, int gemPower, int gemPowerThreshold, TownModel currentTown) {
+	Player maxwewll
+	
+	
+	public Player(TownModel currentTown) {
 		super();
-		this.coin = coin;
-		this.gemPower = gemPower;
-		this.gemPowerThreshold = gemPowerThreshold;
+		this.coin = 3;
+		this.gemPower = 0;
+		this.gemPowerThreshold = 7;
 		this.currentTown = currentTown;
 	}
 

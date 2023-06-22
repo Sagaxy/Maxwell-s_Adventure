@@ -36,6 +36,7 @@ public class Merchant {
 	        String trade = sc.next();
 	        trade.toUpperCase();
 	        
+	        
 	        if(trade.equals("yes")) {
 	        	trade = "Y";
 	        }
@@ -43,29 +44,44 @@ public class Merchant {
 	        	trade = "N";
 	        }
 	        else {
-	        	System.out.println("Huh, i think you don't get it! I'll say it again.");
-	        	
+	        	System.out.println("Huh?! I think you don't understand it! I'll say it again.");
+	        	coinToThreshold(maxwell);	        	
 	        }
+	        
 	        
 	        if(maxwell.getCoin()<5) {
 	        	if(trade.equals("Y")) {
 	        		//perde 1 moeda ganha 1 limiar na joia
+	        		maxwell.setCoin(maxwell.getCoin()+1);
+	        		maxwell.setGemPower(maxwell.getGemPowerThreshold()+1);
 	        	}
 	        	else {
-	        		//perde 1 moeda	        		
+	        		//perde 1 moeda
+	        		maxwell.setCoin(maxwell.getCoin()-1);
 	        	}
 	        }	
 	        else {
 	        	if(trade.equals("Y")) {
 	        		//perde 3 moeda e ganha 2 de limiar na joia
+	        		maxwell.setCoin(maxwell.getCoin()-3);
+	        		maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold()+2);
 	        	}
 	        	else {
 	        		//perde 2 moeda	        		
+	        		maxwell.setCoin(maxwell.getCoin()-2);
 	        	}
 	        
 	        }
-
+	        
         }
-}
+        
+        
+        
+        
+	        
+	      /*  
+
+        
+
         
 

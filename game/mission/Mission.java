@@ -1,11 +1,11 @@
 package game.mission;
 
 import java.util.Scanner;
-
 import game.character.Player;
 
 public class Mission{
     Scanner sc = new Scanner(System.in);
+	private Player maxwell;
     
     public String acceptMission() {
     	System.out.println("Do you accept this mission ? ");
@@ -16,7 +16,7 @@ public class Mission{
     
     //Missão de Kingdom of Kalb 
     if (sc.next().equals("yes")){   
-        Player.getCoin();
+        maxwell.getCoin();
         System.out.println("Go to the city of Grand Duchy of Smalia and receive the gloves of power ");
     
         //chegando em Grand Duchy, completando a missão 

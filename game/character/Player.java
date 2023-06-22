@@ -9,8 +9,7 @@ public class Player {
 	private int gemPower;
 	private int gemPowerThreshold;
 	private TownModel currentTown;
-	
-	
+		
 	private Player(TownModel currentTown) {
 		super();
 		this.coin = 3;
@@ -26,7 +25,6 @@ public class Player {
 		return maxwell;
 	}
 
-	
 	public int getCoin() {
 		return coin;
 	}

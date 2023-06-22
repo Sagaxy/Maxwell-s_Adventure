@@ -5,23 +5,28 @@ import game.town.*;
 
 public class Method {
 	
-	protected Player Maxwell = new Player(3, 0, 7, false, );
-	
-	public void gemPowerCheck(Player Maxwell) {
+	public void gemPowerCheck(Player maxwell) {
 
-		if (Maxwell.getGemPower() < 0) {
-			Maxwell.setGemPower(0);
+		if (maxwell.getGemPower() < 0) {
+			maxwell.setGemPower(0);
 
-		} else if (Maxwell.getGemPower() > Maxwell.getGemPowerThreshold()) {
-			//metodo de recursao para morrer;
+		} else if (maxwell.getGemPower() > maxwell.getGemPowerThreshold()) {
+			System.out.println("Your gem increased to mutch power, you can't travel anymore. ");
+			//metodo para quebrar o codigo
 		}
 	}
 
-	public void Travel(Player Maxwell) {
+	public void Travel(Player maxwell) {
 
-		if (Maxwell.getCoin() >= 1) {
+		if (maxwell.getCoin() >= 1) {
+			maxwell.getCurrentTown();
+			
 
-		} else {
+		}
+		else {
+			System.out.println("You have no coins, you can't continue your journey. ");
+			
+			
 			
 		}
 	}

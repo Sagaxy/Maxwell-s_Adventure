@@ -9,7 +9,7 @@ public class Player {
 	private int gemPower;
 	private int gemPowerThreshold;
 	private TownModel currentTown;
-		
+
 	private Player(TownModel currentTown) {
 		super();
 		this.coin = 3;
@@ -17,7 +17,7 @@ public class Player {
 		this.gemPowerThreshold = 7;
 		this.currentTown = currentTown;
 	}
-	
+
 	public static Player getMaxwel(TownModel currentTown) {
 		if (maxwell == null) {
 			maxwell = new Player(currentTown);
@@ -57,7 +57,4 @@ public class Player {
 	public void setCurrentTown(TownModel currentTown) {
 		this.currentTown = currentTown;
 	}
-
-
-
 }

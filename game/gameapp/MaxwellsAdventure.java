@@ -9,7 +9,7 @@ public class MaxwellsAdventure {
 	
 		Map map = new Map();
 		
-		Player.getMaxwel(ubud);
+		
 	
 		while(true) {
 			

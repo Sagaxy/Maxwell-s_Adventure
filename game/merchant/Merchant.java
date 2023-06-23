@@ -74,14 +74,4 @@ public class Merchant {
 	        }
 	        
         }
-        
-        
-        
-        
-	        
-	      /*  
-
-        
-
-        
-
+}

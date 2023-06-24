@@ -2,7 +2,6 @@ package game.method;
 
 import java.util.List; 
 import java.util.Scanner;
-
 import game.character.Player;
 import game.town.Edge;
 import game.town.TownModel;

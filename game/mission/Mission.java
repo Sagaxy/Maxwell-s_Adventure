@@ -24,7 +24,14 @@ public class Mission {
         }
         return answer;
 	}
-
+	
+	public void questKOKalb(String answerMission) {
+	
+		if(answerMission.equals("Y")) {
+			
+		}
+	}
+}
 	/*
 		// Missão de Kingdom of Kalb
 		if (acceptMission().equals("Y")) {

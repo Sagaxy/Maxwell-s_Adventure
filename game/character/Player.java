@@ -10,6 +10,8 @@ public class Player {
 	private int gemPowerThreshold;
 	private TownModel currentTown;
 
+
+
 	private Player(TownModel currentTown) {
 		super();
 		this.coin = 3;

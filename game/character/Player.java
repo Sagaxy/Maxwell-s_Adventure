@@ -9,8 +9,9 @@ public class Player {
 	private int gemPower;
 	private int gemPowerThreshold;
 	private TownModel currentTown;
-
-
+	private boolean questKingdonOfKalb;
+	private boolean questDefalsia;
+	private boolean questVuneseEmpire;
 
 	private Player(TownModel currentTown) {
 		super();
@@ -18,6 +19,9 @@ public class Player {
 		this.gemPower = 0;
 		this.gemPowerThreshold = 7;
 		this.currentTown = currentTown;
+		this.questKingdonOfKalb = false;
+		this.questDefalsia = false;
+		this.questVuneseEmpire = false;
 	}
 
 	public static Player getMaxwel(TownModel currentTown) {
@@ -59,4 +63,29 @@ public class Player {
 	public void setCurrentTown(TownModel currentTown) {
 		this.currentTown = currentTown;
 	}
+
+	public boolean isQuestKingdonOfKalb() {
+		return questKingdonOfKalb;
+	}
+
+	public void setQuestKingdonOfKalb(boolean questKingdonOfKalb) {
+		this.questKingdonOfKalb = questKingdonOfKalb;
+	}
+
+	public boolean isQuestDefalsia() {
+		return questDefalsia;
+	}
+
+	public void setQuestDefalsia(boolean questDefalsia) {
+		this.questDefalsia = questDefalsia;
+	}
+
+	public boolean isQuestVuneseEmpire() {
+		return questVuneseEmpire;
+	}
+
+	public void setQuestVuneseEmpire(boolean questVuneseEmpire) {
+		this.questVuneseEmpire = questVuneseEmpire;
+	}
+
 }

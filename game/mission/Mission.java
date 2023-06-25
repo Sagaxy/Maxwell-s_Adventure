@@ -25,19 +25,23 @@ public class Mission {
         return answer;
 	}
 	
-	public void questKOKalb(String answerMission) {
+	public questKOKalb(String answerMission, Player maxwell) {
 	
 		if(answerMission.equals("Y")) {
-			
+			maxwell.setCoin(maxwell.getCoin() + 4);
+			maxwell.setQuestKingdonOfKalb(true);
+			System.out.println("ypu earned 4 coins!");
+			System.out.println("Go to the city of Grand Duchy of Smalia and receive the gloves of power ");
+
 		}
 	}
+	public questAcept()
 }
 	/*
 		// Missão de Kingdom of Kalb
 		if (acceptMission().equals("Y")) {
 			maxwell.getCoin();
-			System.out.println("Go to the city of Grand Duchy of Smalia and receive the gloves of power ");
-
+			
 			// chegando em Grand Duchy, completando a missão
 			// coin + 2
 			// Power Threshold + 2

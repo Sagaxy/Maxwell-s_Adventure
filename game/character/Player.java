@@ -4,7 +4,6 @@ import game.town.TownModel;
 
 public class Player {
 
-	private static Player maxwell;
 	private int coin;
 	private int gemPower;
 	private int gemPowerThreshold;
@@ -13,7 +12,7 @@ public class Player {
 	private boolean questDefalsia;
 	private boolean questVuneseEmpire;
 
-	private Player(TownModel currentTown) {
+	public Player(TownModel currentTown) {
 		super();
 		this.coin = 3;
 		this.gemPower = 0;
@@ -22,13 +21,6 @@ public class Player {
 		this.questKingdonOfKalb = false;
 		this.questDefalsia = false;
 		this.questVuneseEmpire = false;
-	}
-
-	public static Player getMaxwel(TownModel currentTown) {
-		if (maxwell == null) {
-			maxwell = new Player(currentTown);
-		}
-		return maxwell;
 	}
 
 	public int getCoin() {
@@ -86,6 +78,12 @@ public class Player {
 
 	public void setQuestVuneseEmpire(boolean questVuneseEmpire) {
 		this.questVuneseEmpire = questVuneseEmpire;
+	}
+
+	
+	public void atributtes() {
+		System.out.println( "[coin=" + coin + "] [gemPower=" + gemPower + "]\n[gemPowerThreshold=" + gemPowerThreshold
+				+ "] [currentTown=" + currentTown.getName() + "]");
 	}
 
 }

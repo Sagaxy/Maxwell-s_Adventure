@@ -1,6 +1,6 @@
 package game.method;
 
-import java.util.List; 
+import java.util.List;
 import java.util.Scanner;
 import game.character.Player;
 import game.town.Edge;
@@ -8,7 +8,30 @@ import game.town.TownModel;
 
 public class Method {
 
-	public void gemPowerCheck(Player maxwell) {
+	Scanner sc = new Scanner(System.in);
+
+	public void Check(Player maxwell) {
+		if (maxwell.getCurrentTown().getName().equals("Nargumun")) {
+			if (maxwell.getCoin() >= 10) {
+				System.out.println("End game");
+				System.out.println("you're the new king of Nargumun");
+				System.exit(0);
+			} else if (maxwell.getCoin() >= 4) {
+				System.out.println("End game");
+				System.out.println("you're a new Lord of Nargumun");
+				System.exit(0);
+			} else {
+				System.out.println("End game");
+				System.out.println("you're a new slave of Nargumun");
+				System.exit(0);
+			}
+		}
+
+		if (maxwell.getCoin() <= 0) {
+			System.out.println("You DIED FROM POBREZA AGUDA");
+			// metodo para quebrar o codigo
+			System.exit(0);
+		}
 
 		if (maxwell.getGemPower() < 0) {
 			maxwell.setGemPower(0);
@@ -24,50 +47,46 @@ public class Method {
 
 		if (maxwell.getCoin() >= 1) {
 			TownModel ctown = maxwell.getCurrentTown();
-			
-			System.out.println("you're in " + maxwell.getCurrentTown());
-            System.out.println("your coins in the bag: " + maxwell.getCoin());
-            
-            List<Edge> neighbohood = ctown.neighboringTowns;
-            
-            System.out.println("Which one of that you wnat to go? ");
-            
-            for(int i = 0; i < neighbohood.size(); i++) {
-            	Edge edge = neighbohood.get(i);
-            	System.out.println((i+1) + ". Town" + edge.getDestiny().getName());
-            }
-            
-            //take the player choice
-            
-            try (Scanner sc = new Scanner(System.in)) {
+
+			System.out.println("\tyou're in " + maxwell.getCurrentTown().getName());
+			System.out.println("\t you got coins in the bag: " + maxwell.getCoin() + "\n");
+
+			List<Edge> neighbohood = ctown.neighboringTowns;
+
+			System.out.println("Which one of that you want to go? ");
+
+			for (int i = 0; i < neighbohood.size(); i++) {
+				Edge edge = neighbohood.get(i);
+				System.out.println((i + 1) + ". Town " + edge.getDestiny().getName());
+			}
+
+			// take the player choice
+
+			try {
 				int choice = sc.nextInt();
-				
-				if(choice < 1 || choice > neighbohood.size()) {
+
+				if (choice < 1 || choice > neighbohood.size()) {
 					System.out.println("INVALID CHOICE");
 					travel(maxwell);
 				}
-				
+
 				Edge chosenTown = neighbohood.get(choice - 1);
-				
-				
-				//modify the current town to the chosen one
-				//sum the gem power with the power of the town
+
+				// modify the current town to the chosen one
+				// sum the gem power with the power of the town
 				maxwell.setCurrentTown(chosenTown.getDestiny());
-				
+
 				maxwell.setGemPower(maxwell.getGemPower() + chosenTown.getDestiny().getPowerQuantity());
-			}
-            catch (Exception e) {
+			} catch (Exception e) {
 				// TODO: handle exception
-            	System.out.println("WHRITE A INTEGER ANSWER");
+				System.out.println("WHRITE A INTEGER ANSWER");
 				travel(maxwell);
 			}
-		}
-		else {
+		} else {
 			System.out.println("You DIED FROM POBREZA AGUDA");
-			//metodo para quebrar o codigo
+			// metodo para quebrar o codigo
 			System.exit(0);
 		}
-		
+
 	}
 }
-          

@@ -2,31 +2,40 @@ package game.mission;
 
 import java.util.Scanner;
 import game.character.Player;
-import game.town.TownModel;
 
 public class Mission {
 	Scanner sc = new Scanner(System.in);
 
-	public String acceptMission() {
+	public String acceptMission(Player maxwell) {
+		String answer;
 
-		System.out.println("Do you accept the quest of this Town?(Y/N) ");
-		String answer = sc.next();
-		answer.toUpperCase();
+		if (maxwell.getCurrentTown().getName().equals("Kingdom of Kalb")
+				|| maxwell.getCurrentTown().getName().equals("Defalsia")
+				|| maxwell.getCurrentTown().getName().equals("Vunese of Empire")) {
+			System.out.println("Do you accept the quest of this Town?(Y/N) ");
+			answer = sc.nextLine();
+			answer.toUpperCase();
 
-		if (answer.equals("yes")) {
-			answer = "Y";
-		} else if (answer.equals("not")) {
-			answer = "N";
-		} else {
-			System.out.println("INVALID ANSWER!! ");
-			acceptMission();
+			if (answer.equals("yes")) {
+				answer = "Y";
+			} else if (answer.equals("not")) {
+				answer = "N";
+			} else {
+				System.out.println("INVALID ANSWER!! ");
+				acceptMission(maxwell);
+			}
+			
+		}
+		else {
+			return answer = "N";
 		}
 		return answer;
+
 	}
 
 	public void questKOKalb(String answerMission, Player maxwell) {
 
-		if (answerMission.equals("Y")) {
+		if (answerMission.equals("Y") & maxwell.isQuestKingdonOfKalb() == false) {
 			maxwell.setCoin(maxwell.getCoin() + 4);
 			maxwell.setQuestKingdonOfKalb(true);
 			System.out.println("you earned 4 coins!");
@@ -37,7 +46,7 @@ public class Mission {
 
 	public void quesDefalsia(String answermission, Player maxwell) {
 
-		if (answermission.equals("Y")) {
+		if (answermission.equals("Y") & maxwell.isQuestDefalsia() == false) {
 			maxwell.setCoin(maxwell.getCoin() + 6);
 			maxwell.setQuestDefalsia(true);
 			System.out.println("Go to the Town of Principality of Kasya and receive the boots of power. ");
@@ -47,7 +56,7 @@ public class Mission {
 
 	public void questVuneseEmpire(String answermission, Player maxwell) {
 
-		if (answermission.equals("Y")) {
+		if (answermission.equals("Y") & maxwell.isQuestVuneseEmpire() == false) {
 			maxwell.setCoin(maxwell.getCoin() + 1);
 			maxwell.setQuestVuneseEmpire(true);
 			System.out.println("Go to the Town Ubud and get the Glory of the Returnees");
@@ -55,7 +64,7 @@ public class Mission {
 		}
 	}
 
-	public void questAcept(Player maxwell, TownModel town) {
+	public void questAcepted(Player maxwell) {
 
 		if (maxwell.isQuestKingdonOfKalb()) {
 			if (maxwell.getCurrentTown().getName().equals("Grand Duchy of Smalia")) {

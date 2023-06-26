@@ -1,9 +1,13 @@
-package game.town;
+package game.gameapp;
 
-public class Map {
-	
-	
-	public void createmap() {
+import game.character.Player;
+import game.merchant.Merchant;
+import game.mission.Mission;
+import game.town.TownModel;
+
+public class GameControl {
+
+	public void StartGame() {
 		TownModel ubud = new TownModel("Ubud", 0);
 		TownModel kingdonOfLegmod = new TownModel("Kingdon of Legmod", 2);
 		TownModel principalityOfNekikh = new TownModel("Principality of Nekikh", 1);
@@ -21,7 +25,7 @@ public class Map {
 		TownModel bun = new TownModel("Bun", 5);
 		TownModel principalityOfKasya = new TownModel("Principality of Kasya", -7);
 		TownModel nargumun = new TownModel("Nargumun", 0);
-		
+
 		ubud.addEdge(kingdonOfLegmod);
 		ubud.addEdge(principalityOfNekikh);
 
@@ -98,6 +102,26 @@ public class Map {
 		chandirSultanate.addEdge(principalityOfKasya);
 
 		principalityOfKasya.addEdge(chandirSultanate);
+
+		Player Max = new Player(ubud);
+		Merchant merchant = new Merchant();
+		game.method.Method method = new game.method.Method();
+		Mission quest = new Mission();
+		
+		while (true) {
+			Max.atributtes();
+			method.Check(Max);
+			quest.questAcepted(Max);
+			String b = quest.acceptMission(Max);
+			quest.questKOKalb(b, Max);
+			quest.quesDefalsia(b, Max);
+			quest.questVuneseEmpire(b, Max);
+			method.travel(Max);
+			merchant.manyCoins(Max);
+			TownModel a = merchant.whereFromGo(Max);
+			merchant.coinToThreshold(Max, a);
+		}
+
 	}
 
 }

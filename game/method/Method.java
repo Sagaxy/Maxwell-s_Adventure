@@ -15,6 +15,7 @@ public class Method {
 
 		} else if (maxwell.getGemPower() > maxwell.getGemPowerThreshold()) {
 			System.out.println("Your gem increased to mutch power, you can't travel anymore. ");
+			System.exit(0);
 			// metodo para quebrar o codigo
 		}
 	}
@@ -64,6 +65,7 @@ public class Method {
 		else {
 			System.out.println("You DIED FROM POBREZA AGUDA");
 			//metodo para quebrar o codigo
+			System.exit(0);
 		}
 		
 	}

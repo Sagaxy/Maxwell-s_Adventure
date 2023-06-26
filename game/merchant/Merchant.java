@@ -2,6 +2,7 @@ package game.merchant;
 
 import java.util.Scanner;
 import game.character.Player;
+import game.town.TownModel;
 
 public class Merchant {
 
@@ -17,20 +18,22 @@ public class Merchant {
         }
         	
         
-        public void whereFromGo() {
+        public String whereFromGo(Player maxwell) {
 	        System.out.println("where do you come from? ");
-	        String comeFrom = sc.nextLine();
-	        
+	        String comeFrom = maxwell.getCurrentTown().getName();
+	        System.out.println("You:" + comeFrom);
 	        System.out.println("hmm..." + comeFrom +", interesting.");
 	        System.out.println("And where are you going? ");
 	        
 	        String going = sc.nextLine();
 	        
 	        System.out.println(going + "? Huh, sure, got it, good trip to you mate!");
+	        
+	        return going;
         }
 	    
         
-        public void coinToThreshold(Player maxwell) {
+        public void coinToThreshold(Player maxwell, String goingtown) {
 	        System.out.println("You want to exchange your coins for threshold in the jewel ?(Y/N)");
         
 	        String trade = sc.next();
@@ -45,11 +48,11 @@ public class Merchant {
 	        }
 	        else {
 	        	System.out.println("Huh?! I think you don't understand it! I'll say it again.");
-	        	coinToThreshold(maxwell);	        	
+	        	coinToThreshold(maxwell, goingtown);	        	
 	        }
 	        
 	        
-	        if(maxwell.getCoin()<5) {
+	        if(maxwell.getCoin()<5 || maxwell.getCurrentTown().getPowerQuantity()) {
 	        	if(trade.equals("Y")) {
 	        		//perde 1 moeda ganha 1 limiar na joia
 	        		maxwell.setCoin(maxwell.getCoin()+1);

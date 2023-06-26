@@ -2,7 +2,8 @@ package game.town;
 
 public class Map {
 	
-	public void generateMap() {
+	
+	public void createmap() {
 		TownModel ubud = new TownModel("Ubud", 0);
 		TownModel kingdonOfLegmod = new TownModel("Kingdon of Legmod", 2);
 		TownModel principalityOfNekikh = new TownModel("Principality of Nekikh", 1);

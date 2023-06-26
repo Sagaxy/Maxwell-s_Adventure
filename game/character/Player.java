@@ -82,8 +82,8 @@ public class Player {
 
 	
 	public void atributtes() {
-		System.out.println( "[coin=" + coin + "] [gemPower=" + gemPower + "]\n[gemPowerThreshold=" + gemPowerThreshold
-				+ "] [currentTown=" + currentTown.getName() + "]");
+		System.out.println( "\n\n\t\tYOUR STATUS:\n[currentTown = " + currentTown.getName() + "]"
+				+ "[gemPowerThreshold = " + gemPowerThreshold + "]\n\t[coin=" + coin + "] [gemPower=" + gemPower + "]");
 	}
 
 }

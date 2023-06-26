@@ -38,6 +38,7 @@ public class Method {
 
 		} else if (maxwell.getGemPower() > maxwell.getGemPowerThreshold()) {
 			System.out.println("Your gem increased to mutch power, you can't travel anymore. ");
+			System.out.println("GAME OVER");
 			System.exit(0);
 			// metodo para quebrar o codigo
 		}
@@ -48,8 +49,8 @@ public class Method {
 		if (maxwell.getCoin() >= 1) {
 			TownModel ctown = maxwell.getCurrentTown();
 
-			System.out.println("\tyou're in " + maxwell.getCurrentTown().getName());
-			System.out.println("\t you got coins in the bag: " + maxwell.getCoin() + "\n");
+			System.out.println("\n\tyou're in " + maxwell.getCurrentTown().getName());
+			System.out.println("\n\tyou got coins in the bag: " + maxwell.getCoin() + "\n");
 
 			List<Edge> neighbohood = ctown.neighboringTowns;
 
@@ -57,13 +58,14 @@ public class Method {
 
 			for (int i = 0; i < neighbohood.size(); i++) {
 				Edge edge = neighbohood.get(i);
-				System.out.println((i + 1) + ". Town " + edge.getDestiny().getName());
+				System.out.println((i + 1) + ". Town " + edge.getDestiny().getName() +" [" +edge.getDestiny().getPowerQuantity()+" of power]");
 			}
 
 			// take the player choice
 
 			try {
-				int choice = sc.nextInt();
+				int choice = 0;
+				choice = sc.nextInt();
 
 				if (choice < 1 || choice > neighbohood.size()) {
 					System.out.println("INVALID CHOICE");

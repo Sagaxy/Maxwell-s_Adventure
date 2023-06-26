@@ -116,10 +116,14 @@ public class GameControl {
 			quest.questKOKalb(b, Max);
 			quest.quesDefalsia(b, Max);
 			quest.questVuneseEmpire(b, Max);
+			method.Check(Max);
 			method.travel(Max);
+			Max.atributtes();
 			merchant.manyCoins(Max);
 			TownModel a = merchant.whereFromGo(Max);
 			merchant.coinToThreshold(Max, a);
+			method.Check(Max);
+			Max.atributtes();
 		}
 
 	}

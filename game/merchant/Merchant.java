@@ -12,25 +12,24 @@ public class Merchant {
 	Scanner sc = new Scanner(System.in);
 
 	public void manyCoins(Player maxwell) {
-		System.out.println("\n\nMerchant:");
-		System.out.println("Oi mate, how many coins you got?");
+		System.out.println("\nMerchant:Oi mate, how many coins you got?");
 		System.out.println("**checking your bag coins**");
 		int coins = maxwell.getCoin();
-		System.out.println("Oh, so, you got " + coins+"\n");
+		System.out.println("Oh, so, you got " + coins+"\n...");
 	}
 
 	public TownModel whereFromGo(Player maxwell) {
-		System.out.println("where do you come from? ");
+		System.out.println("so, where do you come from? ");
 		String comeFrom = maxwell.getCurrentTown().getName();
-		System.out.println("You:" + comeFrom);
-		System.out.println("hmm..." + comeFrom + ", interesting.");
+		System.out.println("\nYou:" + comeFrom);
+		System.out.println("\nMercahnt of "+maxwell.getCurrentTown().getName()+":\nhmm..." + comeFrom + ", interesting.");
 		System.out.println("And where are you going? ");
 
 		List<Edge> options = maxwell.getCurrentTown().neighboringTowns;
 
 		for (int i = 0; i < options.size(); i++) {
 			Edge option = options.get(i);
-			System.out.println((i + 1) + " . Town " + option.getDestiny().getName());
+			System.out.println((i + 1) + " . Town " + option.getDestiny().getName()+" ["+option.getDestiny().getPowerQuantity()+" of power]");
 		}
 
 		int chosenoption = sc.nextInt();
@@ -38,21 +37,21 @@ public class Merchant {
 			System.out.println("INVALID CHOICE");
 			whereFromGo(maxwell);
 		}
+		System.out.println(options.get(chosenoption - 1).getDestiny().getName()+ "? Huh, sure, got it, good trip to you mate!\n");
 
-		System.out.println(options.get(chosenoption - 1) + "? Huh, sure, got it, good trip to you mate!\n");
-
-		return options.get(chosenoption).getDestiny();
+		return options.get(chosenoption - 1).getDestiny();
 	}
 
 	public void coinToThreshold(Player maxwell, TownModel goingtown) {
 		System.out.println("You want to exchange your coins for threshold in the jewel ?(Y/N)");
 
 		String trade = sc.next();
-		trade.toUpperCase();
 
-		if (trade.equals("yes")) {
+
+		if (trade.equals("yes")||trade.equals("y")||trade.equals("YES")||trade.equals("Y")) {
 			trade = "Y";
-		} else if (trade.equals("not")) {
+		}
+		else if (trade.equals("not")||trade.equals("n")||trade.equals("NOT")||trade.equals("N")){
 			trade = "N";
 		} else {
 			System.out.println("Huh?! I think you don't understand it! I'll say it again.\n");

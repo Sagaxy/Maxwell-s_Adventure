@@ -63,41 +63,51 @@ public class Merchant {
 				// resposta 1
 				// perde 1 moeda ganha 1 limiar na joia
 				maxwell.setCoin(maxwell.getCoin() + 1);
-				maxwell.setGemPower(maxwell.getGemPowerThreshold() + 1);
+				maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold() + 1);
+				maxwell.atributtes();
 			} else {
 				// resposta 2
 				// perde 1 moeda
 				maxwell.setCoin(maxwell.getCoin() - 1);
+				maxwell.atributtes();
 			}
-		} else if (maxwell.getCoin() < 5
+		} 
+		else if (maxwell.getCoin() < 5
 				& (maxwell.getCurrentTown().getPowerQuantity() - goingtown.getPowerQuantity()) >= 3) {
 			if (trade.equals("Y")) {
 				// resposta 3
 				// perde 3 moeda e ganha 2 de limiar na joia
 				maxwell.setCoin(maxwell.getCoin() - 1);
 				maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold() + 2);
+				maxwell.atributtes();
 			} else {
 				// resposta 4
 				// perde 2 moeda
 				maxwell.setCoin(maxwell.getCoin() - 2);
+				maxwell.atributtes();
 			}
-		} else if (maxwell.getCoin() >= 5
+		} 
+		else if (maxwell.getCoin() >= 5
 				& (maxwell.getCurrentTown().getPowerQuantity() - goingtown.getPowerQuantity()) < 3) {
 			if (trade.equals("Y")) {
 				// resposta 5
 				maxwell.setCoin(maxwell.getCoin() - 3);
 				maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold() + 2);
+				maxwell.atributtes();
 			} else {
 				// resposta 6
 				maxwell.setCoin(maxwell.getCoin() - 2);
+				maxwell.atributtes();
 			}
 		} else if (maxwell.getCoin() >= 5
 				& (maxwell.getCurrentTown().getPowerQuantity() - goingtown.getPowerQuantity()) >= 3) {
 			if (trade.equals("Y")) {
 				maxwell.setCoin(maxwell.getCoin() - 1);
 				maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold() + 3);
+				maxwell.atributtes();
 			} else {
 				maxwell.setCoin(maxwell.getCoin() - 3);
+				maxwell.atributtes();
 			}
 		}
 

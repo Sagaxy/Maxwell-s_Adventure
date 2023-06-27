@@ -76,9 +76,11 @@ public class Method {
 
 				// modify the current town to the chosen one
 				// sum the gem power with the power of the town
+				maxwell.setGemPower(maxwell.getGemPower() + chosenTown.getDestiny().getPowerQuantity());
+				
 				maxwell.setCurrentTown(chosenTown.getDestiny());
 
-				maxwell.setGemPower(maxwell.getGemPower() + chosenTown.getDestiny().getPowerQuantity());
+				
 			} catch (Exception e) {
 				// TODO: handle exception
 				System.out.println("WHRITE A INTEGER ANSWER");

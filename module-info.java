@@ -6,4 +6,5 @@
  *
  */
 module MaxwellsAdventure {
+	requires java.desktop;
 }

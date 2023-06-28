@@ -9,11 +9,11 @@ public class GameControl {
 
 	public void StartGame() {
 		TownModel ubud = new TownModel("Ubud", 0);
-		TownModel kingdonOfLegmod = new TownModel("Kingdon of Legmod", 2);
+		TownModel kingdomOfLegmod = new TownModel("Kingdom of Legmod", 2);
 		TownModel principalityOfNekikh = new TownModel("Principality of Nekikh", 1);
 		TownModel principalityOfGritesthr = new TownModel("Pricipality of Gritesthr", 5);
 		TownModel protetorateOfDrogove = new TownModel("Protectorate of Drogove", 3);
-		TownModel kingdomOfLastwatch = new TownModel("Kindgom of Lastwatch", -2);
+		TownModel kingdomOfLastwatch = new TownModel("Kingdom of Lastwatch", -2);
 		TownModel grandduchyOfSmalia = new TownModel("Grand Duchy of Smalia", 1);
 		TownModel kingdomOfOldcalia = new TownModel("Kingdom of OldCalia", 4);
 		TownModel kingdomOfKalb = new TownModel("Kingdom of Kalb", 2);
@@ -26,33 +26,33 @@ public class GameControl {
 		TownModel principalityOfKasya = new TownModel("Principality of Kasya", -7);
 		TownModel nargumun = new TownModel("Nargumun", 0);
 
-		ubud.addEdge(kingdonOfLegmod);
+		ubud.addEdge(kingdomOfLegmod);
 		ubud.addEdge(principalityOfNekikh);
 
-		kingdonOfLegmod.addEdge(kingdomOfOldcalia);
-		kingdonOfLegmod.addEdge(principalityOfNekikh);
-		kingdonOfLegmod.addEdge(principalityOfGritesthr);
-		kingdonOfLegmod.addEdge(protetorateOfDrogove);
-		kingdonOfLegmod.addEdge(ubud);
+		kingdomOfLegmod.addEdge(kingdomOfOldcalia);
+		kingdomOfLegmod.addEdge(principalityOfNekikh);
+		kingdomOfLegmod.addEdge(principalityOfGritesthr);
+		kingdomOfLegmod.addEdge(protetorateOfDrogove);
+		kingdomOfLegmod.addEdge(ubud);
 
 		principalityOfNekikh.addEdge(principalityOfGritesthr);
-		principalityOfNekikh.addEdge(kingdonOfLegmod);
+		principalityOfNekikh.addEdge(kingdomOfLegmod);
 		principalityOfNekikh.addEdge(ubud);
 
 		principalityOfGritesthr.addEdge(protetorateOfDrogove);
 		principalityOfGritesthr.addEdge(kingdomOfLastwatch);
-		principalityOfGritesthr.addEdge(kingdonOfLegmod);
+		principalityOfGritesthr.addEdge(kingdomOfLegmod);
 		principalityOfGritesthr.addEdge(principalityOfNekikh);
 
 		protetorateOfDrogove.addEdge(principalityOfGritesthr);
-		protetorateOfDrogove.addEdge(kingdonOfLegmod);
+		protetorateOfDrogove.addEdge(kingdomOfLegmod);
 		protetorateOfDrogove.addEdge(kingdomOfLastwatch);
 		protetorateOfDrogove.addEdge(kingdomOfOldcalia);
 
 		kingdomOfOldcalia.addEdge(protetorateOfDrogove);
 		kingdomOfOldcalia.addEdge(kingdomOfKalb);
 		kingdomOfOldcalia.addEdge(defalsia);
-		kingdomOfOldcalia.addEdge(kingdonOfLegmod);
+		kingdomOfOldcalia.addEdge(kingdomOfLegmod);
 		kingdomOfOldcalia.addEdge(grandduchyOfSmalia);
 		kingdomOfOldcalia.addEdge(kingdomOfLastwatch);
 		kingdomOfOldcalia.addEdge(aymarLeague);
@@ -124,6 +124,7 @@ public class GameControl {
 			merchant.coinToThreshold(Max, a);
 			method.Check(Max);
 			Max.atributtes();
+			
 		}
 
 	}

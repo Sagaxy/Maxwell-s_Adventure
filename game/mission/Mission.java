@@ -24,20 +24,20 @@ public class Mission {
 				System.out.println("INVALID ANSWER!! ");
 				acceptMission(maxwell);
 			}
-			
-		}
-		else {
+
+		} else {
 			return answer = "N";
 		}
 		return answer;
 
 	}
 
+	//Kingdom of kalb quest
 	public void questKOKalb(String answerMission, Player maxwell) {
 
-		if (answerMission.equals("Y") & maxwell.isQuestKingdonOfKalb() == false) {
+		if (answerMission.equals("Y") & maxwell.isQuestKingdomOfKalb() == false) {
 			maxwell.setCoin(maxwell.getCoin() + 4);
-			maxwell.setQuestKingdonOfKalb(true);
+			maxwell.setQuestKingdomOfKalb(true);
 			System.out.println("you earned 4 coins!");
 			System.out.println("Go to the Town of Grand Duchy of Smalia and receive the Gauntlets of power. ");
 
@@ -66,11 +66,11 @@ public class Mission {
 
 	public void questAcepted(Player maxwell) {
 
-		if (maxwell.isQuestKingdonOfKalb()) {
+		if (maxwell.isQuestKingdomOfKalb()) {
 			if (maxwell.getCurrentTown().getName().equals("Grand Duchy of Smalia")) {
 				maxwell.setCoin(maxwell.getCoin() + 2);
 				maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold() + 2);
-				System.out.println("you finished the Kingdon of kalb quest!");
+				System.out.println("you finished the Kingdom of kalb quest!");
 				System.out.println("you earned the Gauntlets of power, 2 coins and 2 pts Power Threshold of the Gem!");
 			}
 		}
@@ -80,11 +80,6 @@ public class Mission {
 				maxwell.setGemPowerThreshold(maxwell.getGemPowerThreshold() + 1);
 				System.out.println("you finished the Defalsia quest!");
 				System.out.println("you earned the boots of power, 3 coins and 1 pts Power Threshold of the Gem!");
-
-				/*
-				 * chegando em Principality of Kasya, completando a missão // coin + 3 // Power
-				 * Threshold + 1
-				 */
 			}
 		}
 		if (maxwell.isQuestVuneseEmpire()) {
@@ -95,7 +90,6 @@ public class Mission {
 				System.out.println(
 						"you earned the Glory of the Returnees, 10 coins and -4 pts Power Threshold of the Gem!");
 			}
-
 		}
 	}
 }

@@ -8,7 +8,7 @@ public class Player {
 	private int gemPower;
 	private int gemPowerThreshold;
 	private TownModel currentTown;
-	private boolean questKingdonOfKalb;
+	private boolean questKingdomOfKalb;
 	private boolean questDefalsia;
 	private boolean questVuneseEmpire;
 
@@ -18,7 +18,7 @@ public class Player {
 		this.gemPower = 0;
 		this.gemPowerThreshold = 7;
 		this.currentTown = currentTown;
-		this.questKingdonOfKalb = false;
+		this.questKingdomOfKalb = false;
 		this.questDefalsia = false;
 		this.questVuneseEmpire = false;
 	}
@@ -56,12 +56,12 @@ public class Player {
 		this.currentTown = currentTown;
 	}
 
-	public boolean isQuestKingdonOfKalb() {
-		return questKingdonOfKalb;
+	public boolean isQuestKingdomOfKalb() {
+		return questKingdomOfKalb;
 	}
 
-	public void setQuestKingdonOfKalb(boolean questKingdonOfKalb) {
-		this.questKingdonOfKalb = questKingdonOfKalb;
+	public void setQuestKingdomOfKalb(boolean questKingdomOfKalb) {
+		this.questKingdomOfKalb = questKingdomOfKalb;
 	}
 
 	public boolean isQuestDefalsia() {
@@ -80,10 +80,11 @@ public class Player {
 		this.questVuneseEmpire = questVuneseEmpire;
 	}
 
-	
 	public void atributtes() {
-		System.out.println( "\n\n\t\tYOUR STATUS:\n[currentTown = " + currentTown.getName() + "]"
-				+ "[gemPowerThreshold = " + gemPowerThreshold + "]\n\t[coin=" + coin + "] [gemPower=" + gemPower + "]");
+		System.out.println("\n\n\t\t[YOUR STATUS]\n---------------------------------"
+				+ "----------------\n\n[currentTown]= (" + currentTown.getName() + ")"
+				+ "\n[gemPowerThreshold] = (" + gemPowerThreshold + ") \n[coin] = (" + coin + ")\n[gemPower] = (" + gemPower
+				+ ")\n\n-------------------------------------------------");
 	}
 
 }

@@ -24,22 +24,34 @@ public class Merchant {
 		System.out.println(">> so, where do you come from? \n");
 		for (int i = 0; i < options.size(); i++) {
 			Edge option = options.get(i);
-			System.out.println("{{"+(i + 1)+"}}"+" . Town " + option.getDestiny().getName() + " ["
+			System.out.println("{{" + (i + 1) + "}}" + " . Town " + option.getDestiny().getName() + " ["
 					+ option.getDestiny().getPowerQuantity() + " of power]");
 		}
-		int answer = sc.nextInt();
+		try {
 
-		System.out.println("\nYou:" + options.get(answer).getDestiny().getName());
-		System.out.println("\nMercahnt of " + maxwell.getCurrentTown().getName() + ":\nhmm..."
-				+ options.get(answer).getDestiny().getName() + ", interesting.");
-		
+			int answer = sc.nextInt();
+			if (answer < 1 || answer > options.size()) {
+
+				System.out.println("\nYou:" + options.get(answer).getDestiny().getName());
+				System.out.println("\nMercahnt of " + maxwell.getCurrentTown().getName() + ":\nhmm..."
+						+ options.get(answer - 1).getDestiny().getName() + ", interesting.");
+			} else {
+				System.out.println("INVALID ANSWER");
+				whereFromGo(maxwell);
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("WHRITE A INTEGER ANSWER");
+			whereFromGo(maxwell);
+
+		}
+
 		System.out.println(">> And where are you going? \n");
-
-		;
 
 		for (int i = 0; i < options.size(); i++) {
 			Edge option = options.get(i);
-			System.out.println("{{"+(i + 1)+"}}"+" . Town " + option.getDestiny().getName() + " ["
+			System.out.println("{{" + (i + 1) + "}}" + " . Town " + option.getDestiny().getName() + " ["
 					+ option.getDestiny().getPowerQuantity() + " of power]");
 		}
 

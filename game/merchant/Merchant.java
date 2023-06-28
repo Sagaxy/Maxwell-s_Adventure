@@ -12,7 +12,7 @@ public class Merchant {
 	Scanner sc = new Scanner(System.in);
 
 	public void manyCoins(Player maxwell) {
-		System.out.println("\nMerchant:Oi mate, how many coins you got?");
+		System.out.println("\nMerchant of "+maxwell.getCurrentTown().getName()+":Oi mate, how many coins you got?");
 		System.out.println("**checking your bag coins**");
 		int coins = maxwell.getCoin();
 		System.out.println("Oh, so, you got " + coins+"\n...");
